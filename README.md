@@ -47,6 +47,5 @@ Also has a potential to add even more functions and relations.
 TO DO:
 
 - Add more functions for existing controllers
-- Improve exception handling
 - Users can add and see new posts and comments in relation to books.
 - Add more initial data for the app.
