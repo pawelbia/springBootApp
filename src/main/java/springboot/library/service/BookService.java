@@ -1,6 +1,5 @@
 package springboot.library.service;
 
-import org.javamoney.moneta.Money;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -8,14 +7,14 @@ import org.springframework.stereotype.Service;
 import springboot.library.model.Book;
 import springboot.library.repository.BookRepository;
 
-import javax.money.CurrencyUnit;
-import javax.money.Monetary;
-import javax.money.MonetaryAmount;
 import javax.transaction.Transactional;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.util.List;
+import java.util.Locale;
 
 @Service
 @ConfigurationProperties(prefix="book.properties")
@@ -59,7 +58,7 @@ public class BookService {
     }
 
     @Transactional
-    public long calculateTimeDifferenceInDays(Long bookId) {
+    public BigDecimal calculateTimeDifferenceInDays(Long bookId) {
 
         Book book = bookRepository.findById(bookId).orElseThrow(() -> new IllegalStateException("user not found"));
         LocalDateTime borrowedTime = book.getBorrowedAt();
@@ -71,15 +70,11 @@ public class BookService {
         boolean isNegative = period.isNegative();
         if(isNegative){
             int days = period.getDays();
-            CurrencyUnit pln = Monetary.getCurrency("PLN");
-            Money moneyOf = Money.of(1, pln);
-            MonetaryAmount onePLN = Monetary.getDefaultAmountFactory()
-                    .setCurrency(pln).setNumber(1).create();
-            MonetaryAmount calculate = onePLN.multiply(days);
-            return calculate.getNumber().getAmountFractionNumerator();
-
+            int scale = 2;
+            BigDecimal money = new BigDecimal("2");
+            return money.multiply(new BigDecimal(days)).setScale(scale, RoundingMode.HALF_UP);
         } else {
-            return 0;
+            return BigDecimal.ZERO;
         }
     }
     public String calculateCurrentTimeDifference(Long bookId) {

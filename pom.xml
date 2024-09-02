@@ -91,11 +91,6 @@
             <version>1.0.2</version>
         </dependency>
         <dependency>
-            <groupId>org.javamoney</groupId>
-            <artifactId>moneta</artifactId>
-            <version>1.4.2</version>
-        </dependency>
-        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
@@ -117,6 +112,8 @@
                         <exclude>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                            <version>1.18.30</version>
+                            <scope>provided</scope>
                         </exclude>
                     </excludes>
                 </configuration>

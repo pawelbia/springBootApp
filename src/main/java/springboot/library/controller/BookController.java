@@ -6,6 +6,7 @@ import springboot.library.model.dto.read.BookReadDto;
 import springboot.library.model.dto.read.BookTitleDto;
 import springboot.library.service.BookService;
 
+import java.math.BigDecimal;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -58,7 +59,7 @@ public class BookController {
     }
 
     @PutMapping("books/{bookId}/remove")
-    public long removeBookFromAppUserAndCalculate(@PathVariable(value = "bookId") Long bookId) {
+    public BigDecimal removeBookFromAppUserAndCalculate(@PathVariable(value = "bookId") Long bookId) {
         return bookService.calculateTimeDifferenceInDays(bookId);
     }
 
