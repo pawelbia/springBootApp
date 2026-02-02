@@ -8,7 +8,7 @@ import springboot.library.model.Book;
 import springboot.library.model.BookAuthor;
 import springboot.library.model.BookAuthorId;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 
 @Repository
 @Transactional

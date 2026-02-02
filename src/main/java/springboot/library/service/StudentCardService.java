@@ -7,7 +7,7 @@ import springboot.library.model.StudentCard;
 import springboot.library.model.dto.read.AppUserReadDto;
 import springboot.library.repository.StudentCardRepository;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 

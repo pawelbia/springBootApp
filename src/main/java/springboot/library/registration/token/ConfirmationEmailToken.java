@@ -7,7 +7,7 @@ import lombok.Setter;
 import org.springframework.stereotype.Service;
 import springboot.library.model.AppUser;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity(name="ConfirmationEmailToken")

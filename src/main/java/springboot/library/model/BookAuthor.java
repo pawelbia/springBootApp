@@ -3,7 +3,7 @@ package springboot.library.model;
 import lombok.*;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity(name="BookAuthor")
 @Table(name="book_author")

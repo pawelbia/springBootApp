@@ -14,7 +14,7 @@ import springboot.library.model.role_permission.AppUserRole;
 import springboot.library.registration.token.ConfirmationEmailTokenService;
 import springboot.library.repository.AppUserRepository;
 import springboot.library.service.role_permisson_ser.RoleService;
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import java.util.List;
 
 

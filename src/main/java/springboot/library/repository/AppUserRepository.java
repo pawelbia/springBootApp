@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import springboot.library.model.AppUser;
 import springboot.library.model.Book;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 

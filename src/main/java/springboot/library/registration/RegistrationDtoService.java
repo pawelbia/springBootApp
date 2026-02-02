@@ -1,5 +1,6 @@
 package springboot.library.registration;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,6 @@ import springboot.library.registration.token.ConfirmationEmailToken;
 import springboot.library.registration.token.ConfirmationEmailTokenService;
 import springboot.library.service.AppUserService;
 
-import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 
 @Service

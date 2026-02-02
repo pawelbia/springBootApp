@@ -21,18 +21,16 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
-                .csrf().disable()
-                .authorizeRequests()
-                .antMatchers("api/v1/registration").permitAll()
-                .and()
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("api/v1/registration").permitAll())
                 .build();
 
     }
 
     @Bean
     public DaoAuthenticationProvider daoAuthenticationProvider() {
-        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-        daoAuthenticationProvider.setUserDetailsService(appUserService);
+        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider(appUserService);
         daoAuthenticationProvider.setPasswordEncoder(bCryptPasswordEncoder);
         return  daoAuthenticationProvider;
     }

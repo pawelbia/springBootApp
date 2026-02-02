@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import springboot.library.model.dto.write.AppUserEmailDto;
 import springboot.library.registration.email.EmailDtoService;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/email-update")

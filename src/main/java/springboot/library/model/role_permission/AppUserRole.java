@@ -1,9 +1,8 @@
 package springboot.library.model.role_permission;
 
+import jakarta.persistence.*;
 import lombok.*;
 import springboot.library.model.AppUser;
-
-import javax.persistence.*;
 
 @Entity(name="AppUserRole")
 @Table(name="app_user_Role")

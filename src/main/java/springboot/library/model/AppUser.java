@@ -1,5 +1,6 @@
 package springboot.library.model;
 
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -7,7 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import springboot.library.model.role_permission.AppUserRole;
 import springboot.library.registration.token.ConfirmationEmailToken;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

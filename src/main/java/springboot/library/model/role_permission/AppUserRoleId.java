@@ -1,9 +1,7 @@
 package springboot.library.model.role_permission;
 
 import lombok.*;
-
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Embeddable

@@ -8,7 +8,7 @@ import springboot.library.model.role_permission.AppUserRole;
 import springboot.library.model.role_permission.AppUserRoleId;
 import springboot.library.model.role_permission.Role;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import java.util.Optional;
 
 @Repository

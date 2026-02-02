@@ -1,5 +1,6 @@
 package springboot.library.service.role_permisson_ser;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import springboot.library.model.AppUser;
@@ -8,7 +9,7 @@ import springboot.library.model.role_permission.AppUserRole;
 import springboot.library.model.role_permission.Role;
 import springboot.library.repository.role_permission_rep.AppUserRoleRepository;
 
-import javax.transaction.Transactional;
+
 
 @Service
 @AllArgsConstructor

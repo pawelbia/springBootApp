@@ -1,9 +1,9 @@
 package springboot.library.model;
 
+import jakarta.validation.constraints.Digits;
 import lombok.*;
 
-import javax.persistence.*;
-import javax.validation.constraints.Digits;
+import jakarta.persistence.*;
 
 
 @Entity(name="StudentCard")

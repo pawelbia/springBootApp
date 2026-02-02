@@ -5,9 +5,7 @@ import org.springframework.stereotype.Service;
 import springboot.library.model.role_permission.Role;
 import springboot.library.repository.role_permission_rep.RoleRepository;
 
-import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor
