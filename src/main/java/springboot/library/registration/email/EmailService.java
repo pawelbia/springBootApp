@@ -29,7 +29,7 @@ public class EmailService {
             helper.setText(email, true);
             helper.setTo(to);
             helper.setSubject("email address verification");
-            helper.setFrom("dev.pb.example@gmail.com");
+            helper.setFrom("dev.pb.emailtest@gmail.com");
             javaMailSender.send(mimeMessage);
         } catch (MessagingException e) {
             throw new IllegalStateException("failed to send email");
