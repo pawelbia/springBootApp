@@ -22,7 +22,6 @@ public class AdminController {
 
     private final RoleService roleService;
     private final PermissionService permissionService;
-
     private final RolePermissionService rolePermissionService;
 
     @GetMapping("/roles")
